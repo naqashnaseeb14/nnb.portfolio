@@ -1,0 +1,32 @@
+{
+  "highlights": [
+    {
+      "label": "Fragrance brand / TikTok",
+      "title": "Started a fragrance TikTok from scratch. About 94% of views came from For You.",
+      "detail": "10.3K organic views · 690 likes · 25 shares · 88 profile views · no ad spend",
+      "tone": "lime",
+      "media": "/assets/tiktok-discovery.webp",
+      "mediaAlt": "TikTok Analytics screenshot showing 94 percent of traffic from the For You feed"
+    },
+    {
+      "label": "Sports interest page / organic growth",
+      "title": "Posted when cricket fans were looking for updates. One post reached 515,552 views.",
+      "detail": "20,768 interactions · second squad-announcement post reached 57,872 views",
+      "tone": "orange",
+      "media": "/assets/sports-post-515552.webp",
+      "mediaAlt": "Instagram post insights screenshot showing 515552 views and 20768 interactions"
+    },
+    {
+      "label": "On-site event activation / fragrance brand",
+      "title": "Helped photographers and videographers capture a marathon as it happened.",
+      "detail": "Photographers, videographers, track coverage, booth timing, and full-day coordination",
+      "tone": "blue"
+    },
+    {
+      "label": "Strategic capability demo / café concept",
+      "title": "Built a café content concept around the reasons people actually stop for coffee.",
+      "detail": "Occasion-based audience thinking · experience-led pricing psychology · content pillars",
+      "tone": "ink"
+    }
+  ]
+}

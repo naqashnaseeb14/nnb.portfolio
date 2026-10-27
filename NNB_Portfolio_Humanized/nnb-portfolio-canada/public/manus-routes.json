@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Home"
+    },
+    {
+      "path": "/work/",
+      "title": "Work"
+    },
+    {
+      "path": "/work/boutique-hotel-content/",
+      "title": "Making a hotel feel present before someone arrives"
+    },
+    {
+      "path": "/work/dental-aesthetic-clinic/",
+      "title": "Reviving a dormant clinic page without losing the approval rhythm"
+    },
+    {
+      "path": "/work/industrial-elevator-foundation/",
+      "title": "Building a B2B industrial presence from absolute zero"
+    },
+    {
+      "path": "/work/land-pakistan/",
+      "title": "Building trust without turning real estate into a listings feed"
+    },
+    {
+      "path": "/services/",
+      "title": "Services"
+    },
+    {
+      "path": "/services/campaign-orchestration/",
+      "title": "Campaign orchestration"
+    },
+    {
+      "path": "/services/content-operations/",
+      "title": "Content operations"
+    },
+    {
+      "path": "/services/performance-sensemaking/",
+      "title": "Performance reporting and optimisation"
+    },
+    {
+      "path": "/services/social-strategy/",
+      "title": "Social strategy"
+    },
+    {
+      "path": "/about/",
+      "title": "About"
+    },
+    {
+      "path": "/insights/",
+      "title": "Insights"
+    },
+    {
+      "path": "/insights/structure-a-dvc-campaign/",
+      "title": "How to structure a digital video campaign before, during, and after launch"
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact"
+    },
+    {
+      "path": "/privacy/",
+      "title": "Privacy"
+    }
+  ]
+}

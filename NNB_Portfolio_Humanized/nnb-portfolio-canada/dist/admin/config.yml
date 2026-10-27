@@ -1,0 +1,150 @@
+backend:
+  name: github
+  repo: REPLACE_WITH_GITHUB_USERNAME/REPLACE_WITH_REPOSITORY
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} {{slug}}"
+    update: "Update {{collection}} {{slug}}"
+    delete: "Delete {{collection}} {{slug}}"
+    uploadMedia: "Upload {{path}}"
+
+publish_mode: editorial_workflow
+site_url: https://REPLACE_WITH_YOUR_DOMAIN
+display_url: https://REPLACE_WITH_YOUR_DOMAIN
+media_folder: public/uploads
+public_folder: /uploads
+media_processing:
+  enabled: true
+  format:
+    enabled: true
+    default: webp
+  quality: 82
+  strip_metadata: true
+  width: 1600
+  height: null
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: content/projects
+    create: true
+    slug: "{{slug}}"
+    summary: "{{shortTitle}} · {{status}} · {{sector}}"
+    sortable_fields: [priority, title, dates]
+    fields:
+      - { label: Case-study title, name: title, widget: string, hint: "Write the decision or change, not only the client name." }
+      - { label: Short title, name: shortTitle, widget: string }
+      - { label: Client or disclosure label, name: client, widget: string, hint: "Use the client name only when approved. Otherwise write NDA-covered and describe the sector." }
+      - { label: Sector, name: sector, widget: string }
+      - { label: Dates and reporting period, name: dates, widget: string }
+      - { label: URL slug, name: slug, widget: string, pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase words separated by hyphens.'] }
+      - { label: Status, name: status, widget: select, options: [draft, active, completed, confidential] }
+      - { label: Featured on homepage, name: featured, widget: boolean, default: false }
+      - { label: Featured priority, name: priority, widget: number, value_type: int, default: 9, hint: "Use 1 for the strongest current project, 2 for the next, and so on." }
+      - { label: Result status, name: resultStatus, widget: select, options: [target, in-progress, reported, verified], default: reported, hint: "Use target or in-progress when a number is an objective, not an achieved result." }
+      - { label: One-line summary, name: summary, widget: text }
+      - { label: My role, name: role, widget: text }
+      - { label: Challenge, name: challenge, widget: text }
+      - { label: Insight, name: insight, widget: text }
+      - label: Strategy decisions
+        name: strategy
+        widget: list
+        field: { label: Decision, name: item, widget: string }
+      - label: Execution stages
+        name: execution
+        widget: list
+        fields:
+          - { label: Stage, name: label, widget: string }
+          - { label: What happened, name: text, widget: text }
+      - { label: Reported or verified result, name: result, widget: text, hint: "Include the period, source, scope, and whether the result is organic, paid, or combined." }
+      - { label: Reflection, name: reflection, widget: text }
+      - { label: Credits and disclosure, name: credits, widget: text }
+      - { label: Editorial visual tone, name: visual, widget: select, options: [visual-orange, visual-lime, visual-ink, visual-blue] }
+      - { label: Headline metric, name: metric, widget: string }
+      - label: Tags
+        name: tags
+        widget: list
+        field: { label: Tag, name: item, widget: string }
+      - label: Proof images
+        name: media
+        widget: list
+        hint: "Use 2–4 selected images. Every image needs a caption, alt text, reporting period, and source."
+        fields:
+          - { label: Image, name: file, widget: image, choose_url: false, media_processing: { enabled: true, format: { enabled: true, default: webp }, quality: 82, strip_metadata: true, width: 1600, height: null, aspect_ratio: 16x10 } }
+          - { label: Proof type, name: type, widget: select, options: [cover, proof, process] }
+          - { label: Caption, name: caption, widget: string }
+          - { label: Alt text, name: alt, widget: string, hint: "Describe what the image shows, not only its filename." }
+          - { label: Reporting period, name: period, widget: string, required: false }
+          - { label: Source note, name: source, widget: string, required: false }
+
+  - name: services
+    label: Services
+    label_singular: Service
+    folder: content/services
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    fields:
+      - { label: Service name, name: name, widget: string }
+      - { label: Number, name: number, widget: string }
+      - { label: Statement, name: statement, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Best for, name: suited, widget: text }
+      - label: Outputs
+        name: outputs
+        widget: list
+        field: { label: Output, name: item, widget: string }
+      - { label: Related project slug, name: project, widget: string, required: false }
+      - { label: Visual accent, name: accent, widget: select, options: [lime, orange, blue, ink] }
+
+  - name: articles
+    label: Insights
+    label_singular: Article
+    folder: content/articles
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} · {{date}}"
+    fields:
+      - { label: Article title, name: title, widget: string }
+      - { label: Short description, name: dek, widget: text }
+      - { label: Publish date, name: date, widget: string, hint: "Use a human-readable date such as 18 Oct 2026." }
+      - { label: Reading time, name: readTime, widget: string }
+      - { label: Category, name: category, widget: string }
+      - { label: Intro, name: intro, widget: text }
+      - { label: Published, name: published, widget: boolean, default: false }
+      - label: Sections
+        name: sections
+        widget: list
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Body, name: body, widget: text }
+
+  - name: settings
+    label: Site settings
+    files:
+      - label: Profile and contact
+        name: profile
+        file: content/profile.json
+        fields:
+          - { label: Full name, name: name, widget: string }
+          - { label: Short name, name: shortName, widget: string }
+          - { label: Brand, name: brand, widget: string }
+          - { label: Designation, name: role, widget: string }
+          - { label: Contact email, name: email, widget: string }
+          - { label: Hosted enquiry form endpoint, name: formEndpoint, widget: string, required: false, hint: "Optional. Add your approved hosted form endpoint later. Leave empty to use the email fallback." }
+          - { label: Availability line, name: availability, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: About, name: about, widget: text }
+      - label: Additional proof highlights
+        name: highlights
+        file: content/highlights.json
+        fields:
+          - label: Highlights
+            name: highlights
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Detail, name: detail, widget: string }
+              - { label: Tone, name: tone, widget: select, options: [lime, orange, blue, ink] }

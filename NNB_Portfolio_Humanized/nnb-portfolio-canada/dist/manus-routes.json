@@ -1,0 +1,72 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Home"
+    },
+    {
+      "path": "/work/",
+      "title": "Work"
+    },
+    {
+      "path": "/work/boutique-hotel-content/",
+      "title": "Showing what makes a boutique hotel worth visiting"
+    },
+    {
+      "path": "/work/dental-aesthetic-clinic/",
+      "title": "Bringing a quiet clinic page back to life"
+    },
+    {
+      "path": "/work/fragrance-tiktok-discovery/",
+      "title": "Giving a new fragrance account a start on TikTok"
+    },
+    {
+      "path": "/work/industrial-elevator-foundation/",
+      "title": "Starting a B2B social presence from scratch"
+    },
+    {
+      "path": "/work/land-pakistan/",
+      "title": "Helping a real estate brand show up consistently"
+    },
+    {
+      "path": "/work/timely-organic-content/",
+      "title": "Moving quickly when the audience is paying attention"
+    },
+    {
+      "path": "/services/",
+      "title": "Services"
+    },
+    {
+      "path": "/services/social-strategy/",
+      "title": "Ongoing content strategy and management"
+    },
+    {
+      "path": "/services/campaign-orchestration/",
+      "title": "Campaign launch strategy"
+    },
+    {
+      "path": "/services/content-operations/",
+      "title": "Fractional campaign coordination"
+    },
+    {
+      "path": "/about/",
+      "title": "About"
+    },
+    {
+      "path": "/insights/",
+      "title": "Insights"
+    },
+    {
+      "path": "/insights/structure-a-dvc-campaign/",
+      "title": "How I plan a video campaign from teaser to follow-up"
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact"
+    },
+    {
+      "path": "/privacy/",
+      "title": "Privacy"
+    }
+  ]
+}
